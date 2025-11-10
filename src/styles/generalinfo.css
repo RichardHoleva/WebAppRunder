@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  background-image: none;
+  --heading : "Montserrat", sans-serif;
+  --body : "Lato", sans-serif;
+}
+
+.create-general-page {
+  min-height: 100vh;
+  height: auto;
+  overflow-y: auto;
+}
+
+.create-general-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-bottom: 100px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 40px 0 20px 0;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.87);
+  font-family: var(--heading);
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  color: #DAFF00;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.close-btn:focus {
+  outline: none;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 200px;
+  margin: 30px 0 15px 0;
+}
+
+.section-header-description {
+  display: flex;
+  align-items: center;
+  gap: 133px;
+  margin: 30px 0 15px 0;
+}
+
+.section-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.87);
+  white-space: nowrap;
+  font-family: var(--heading);
+}
+
+.required-badge {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--body);
+}
+
+.date-time-container {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+}
+
+.date-time-field {
+  flex: 0 0 135px;
+  max-width: 135px;
+}
+
+.date-time-field .input-field {
+  height: 25px;
+}
+
+.confirm-btn {
+  width: 100%;
+  max-width: 400px;
+  height: 56px;
+  margin: 40px auto 0;
+  display: block;
+  background-color: #DAFF00;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: var(--heading);
+}
+
+.confirm-btn:active {
+  transform: scale(0.98);
+}
+
+/*Add Image Styles */
+.add-image-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.upload-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 150px;
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+.upload-content {
+  text-align: center;
+}
+
+
+.upload-box p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 16px;
+  font-family: var(--body);
+}
+
+.image-preview {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+/* End of Add Image Styles */
+
+/* Input Field Styles */
+.input-container {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  width: 90%;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-family: var(--body);
+  color: rgba(255, 255, 255, 0.87);
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-field.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.input-field::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.input-field:focus {
+  border-color: #DAFF00;
+  background-color: rgba(218, 255, 0, 0.05);
+}
+/* End of Input Field Styles */
+
+/*Entrance */
+
+.entrance-container {
+  max-width: 400px;
+  margin: 0;
+  padding: 0;
+}
+
+.entrance-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: var(--heading);
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.entrance-btn {
+  flex: 1;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.87);
+  border-radius: 32px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--body);
+}
+
+.entrance-btn:hover {
+  border-color: #DAFF00;
+  background-color: rgba(218, 255, 0, 0.1);
+}
+
+.entrance-btn.active {
+  background-color: #DAFF00;
+  color: #201E1F;
+  border-color: #DAFF00;
+}
+
+.price-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 15px;
+  animation: slideDown 0.3s ease;
+}
+
+.price-input-container label {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.87);
+  font-family: var(--body);
+}
+
+.price-input-container input {
+  padding: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.87);
+  font-family: var(--body);
+}
+
+.price-input-container input:focus {
+  background-color: rgba(218, 255, 0, 0.05);
+  outline: none;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,135 @@
+.onboarding-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 390px;
+  margin: 0 auto;
+}
+
+.onboarding-content {
+  flex: 1;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.onboarding-header {
+  position: relative;
+  width: 100%;
+  max-width: 390px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+
+.onboarding-logo {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.onboarding-logo img {
+  width: 35px;
+  height: auto;
+}
+
+.onboarding-image-bg {
+  width: 100vw;
+  max-width: 390px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  
+}
+
+.onboarding-image-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.onboarding-image-overlay {
+  position: absolute;
+  top: 29%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.onboarding-image-overlay img {
+  width: 210px;
+  height: auto;
+}
+
+.onboarding-dots {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background-color: #DAFF00;
+  width: 24px;
+  border-radius: 4px;
+}
+
+.onboarding-buttons {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  max-width: 360px;
+  padding-bottom: 40px;
+}
+
+.onboarding-buttons button {
+  flex: 1;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-join {
+  background-color: #DAFF00;
+  color: #201E1F;
+}
+
+.btn-signin {
+  background-color: transparent;
+  color: white;
+  border: 2px solid #DAFF00;
+}

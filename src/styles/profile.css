@@ -1,0 +1,31 @@
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px);
+  padding: 20px;
+}
+
+.profile-content {
+  padding: 40px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.profile-content h1 {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.sign-out-button {
+  width: 200px;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 6px;
+  font-size: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
