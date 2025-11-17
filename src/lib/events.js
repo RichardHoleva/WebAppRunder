@@ -14,38 +14,48 @@ export async function createEvent(eventData, imageFile = null) {
       imageUrl = await createSignedUrl(imagePath, 31536000, 'run-event')
     }
 
-    // Parse and format the date properly
-    let startsAt
-    if (eventData.date) {
-      // Create a proper Date object from the input
-      const date = new Date(eventData.date)
-      const time = eventData.time || '00:00'
-      const [hours, minutes] = time.split(':')
-      
-      // Set the time on the date
-      date.setHours(parseInt(hours, 10), parseInt(minutes, 10), 0, 0)
-      
-      // Convert to ISO string
-      startsAt = date.toISOString()
-    } else {
-      throw new Error('Date is required')
+    let startsAt;
+
+    if (!eventData.date) {
+      throw new Error('Date is required');
     }
 
-    // Create event in database - using user_id instead of created_by
-    const { data, error } = await supabase
-      .from('events')
-      .insert({
-        title: eventData.title,
-        starts_at: startsAt,
-        user_id: user.id,
-        description: eventData.description || null,
-        location: eventData.location,
-        type_of_run: eventData.typeOfRun || 'free',
-        ticket_price: eventData.typeOfRun === 'paid' ? eventData.ticketPrice : null,
-        image_url: imageUrl
-      })
-      .select()
-      .single()
+    const datePart = eventData.date;
+    const timePart =
+      eventData.time && eventData.time.trim() !== ""
+        ? eventData.time
+        : "00:00";
+
+    const [hours, minutes] = timePart.split(":");
+    const h = parseInt(hours, 10);
+    const m = parseInt(minutes, 10);
+
+    if (Number.isNaN(h) || Number.isNaN(m)) {
+      throw new Error("Invalid time value");
+    }
+
+    startsAt = `${datePart} ${hours.padStart(2, "0")}:${minutes.padStart(
+      2,
+      "0"
+    )}:00`;
+
+const { data, error } = await supabase
+  .from('events')
+  .insert({
+    title: eventData.title,
+    description: eventData.description || null,
+    location: eventData.location,
+    date: eventData.date,           
+    time: eventData.time || null,   
+    starts_at: startsAt,
+    user_id: user.id,
+    type_of_run: eventData.typeOfRun || "free",
+    ticket_price:
+      eventData.typeOfRun === "paid" ? eventData.ticketPrice : null,
+    image_url: imageUrl,
+  })
+  .select()
+  .single();
 
     if (error) throw error
 
