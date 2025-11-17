@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 .onboarding-container {
   display: flex;
   flex-direction: column;
@@ -6,6 +8,16 @@
   min-height: 100vh;
   max-width: 390px;
   margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+}
+
+.onboarding-container h1,
+.onboarding-container h2,
+.onboarding-container h3,
+.onboarding-container h4,
+.onboarding-container h5,
+.onboarding-container h6 {
+  font-family: "Montserrat", sans-serif;
 }
 
 .onboarding-content {
@@ -16,6 +28,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-family: "Lato", sans-serif;
 }
 
 .onboarding-header {
@@ -112,6 +125,7 @@
   width: 100%;
   max-width: 360px;
   padding-bottom: 40px;
+  font-family: "Lato", sans-serif;
 }
 
 .onboarding-buttons button {
@@ -121,6 +135,8 @@
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
 }
 
 .btn-join {

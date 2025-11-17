@@ -52,9 +52,9 @@ export default function LoginFields() {
       </div>
       {/* show error message if login fails */}
       {err && <p className="error-message">{err}</p>}
-      <button disabled={busy} type="submit">Log in</button>
+      <button disabled={busy} type="submit">Login</button>
       <p className="signup-link">
-        <Link to="/register">Forgot password</Link>
+        <Link to="/register">Don't have an account?</Link>
       </p>
     </form>
   )

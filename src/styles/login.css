@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 .login {
   display: flex;
   height: 100vh;
   justify-content: center;
   align-items: center;
+  font-family: "Lato", sans-serif;
 }
 
 .login-container {
@@ -14,6 +17,14 @@
   
 }
 
+.login-container h1,
+.login-container h2,
+.login-container h3,
+.login-container h4,
+.login-container h5,
+.login-container h6 {
+  font-family: "Montserrat", sans-serif;
+}
 
 
 .login-container input {
@@ -24,6 +35,7 @@
   border: 1px solid #ccc;
   border-radius: 8px;
   box-sizing: border-box; /* Add this line */
+  font-family: "Lato", sans-serif;
 }
 
 .login-container input:focus {
@@ -35,6 +47,7 @@
 .login-container .error-message {
   color: rgb(0, 0, 0);
   margin: 8px 0;
+  font-family: "Lato", sans-serif;
 }
 
 .login-container button {
@@ -42,6 +55,8 @@
   padding: 10px;
   cursor: pointer;
   margin-top: 36px;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
 }
 
 .password-container {
@@ -63,7 +78,8 @@
   right: 10px;
   cursor: pointer;
   color: #888;
-  user-select: none; /* Prevents text selection on double-click */
+  user-select: none; 
+  font-family: "Lato", sans-serif;
 }
 
 .login-container button:disabled {
@@ -79,6 +95,7 @@
   text-align: center;
   margin-top: 24px;
   color: #666;
+  font-family: "Lato", sans-serif;
 }
 
 .social-buttons {
@@ -93,6 +110,7 @@
   width: 100%;
   text-align: right;    
   margin-top: 8px;
+  font-family: "Lato", sans-serif;
 }
 
 
