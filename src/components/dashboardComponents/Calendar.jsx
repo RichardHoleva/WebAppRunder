@@ -74,7 +74,7 @@ export default function Calendar() {
     <div className={`calendar ${isCollapsed ? 'collapsed' : ''}`}>
       <div className="calendar-header">
         <button className="calendar-arrow" onClick={goToPreviousWeek}>
-          &lt;
+          <i className="fa-solid fa-angle-left"></i>
         </button>
         <div className="calendar-title">
           <div className="calendar-week">WEEK {weekNumber}</div>
@@ -83,7 +83,7 @@ export default function Calendar() {
           </div>
         </div>
         <button className="calendar-arrow" onClick={goToNextWeek}>
-          &gt;
+          <i class="fa-solid fa-angle-right"></i>
         </button>
       </div>
 

@@ -301,14 +301,11 @@
   cursor: pointer;
 }
 
-
-.add-run-plus {
-  color: #f97316;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 1;
-  transition: transform 0.3s ease;
+.plus {
+  color: #ff7043;
 }
+
+
 
 
 .add-run-text {

@@ -28,7 +28,7 @@ const NavBar = () => {
           <li className="navbar-item">
             <Link to="/create-general" className={`navbar-link ${location.pathname === '/create-general' ? 'active' : ''}`}>
               <div className="create-button">
-                <span className="plus-icon">+</span>
+                <span className="plus-icon"><i className="fa-solid fa-plus"></i></span>
               </div>
             </Link>
           </li>

@@ -14,7 +14,7 @@ export default function AddRunInput() {
   return (
     <div className="add-run-container">
       <button className="add-run-button group" onClick={handleCreateEvent}>
-        <span className="add-run-text"> <span className="add-run-plus">+</span> Create new event</span>
+        <span className="add-run-text"> <span className="plus"><i className="fa-solid fa-plus"></i></span> Create new event</span>
       </button>
     </div>
   );
